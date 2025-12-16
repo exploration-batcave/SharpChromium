@@ -66,8 +66,8 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
         cd ${{env.SOLUTION_FILE_PATH}}
-        ls ${{env.NAME_BATGADGET}}/compiled
-        Compress-Archive -Path ${{env.NAME_BATGADGET}}/compiled/${{env.NAME_BATGADGET}}.exe -DestinationPath ${{ env.NAME_BATGADGET }}.zip
+        ls compiled
+        Compress-Archive -Path compiled/${{env.NAME_BATGADGET}}.exe -DestinationPath ${{ env.NAME_BATGADGET }}.zip
 
     - name: Create Release
       id: create_release
